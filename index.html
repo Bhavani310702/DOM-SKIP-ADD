@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>skip the Add</title>
+    <link rel="stylesheet" href="./skip.css" />
+  </head>
+  <body>
+  <div id="box">
+    <h1>SKIP THE ADD</h1>
+      <div>
+        <video
+          src=""
+          controls
+          muted
+          autoplay
+          id="video"
+          height="300"
+          width="300"
+        ></video>
+      </div>
+   
+      <div id="skip">
+      <button id="btn">skip Add</button>
+      </div>
+    
+    </div>
+    <script>
+      let i = 10;
+      let timer = document.getElementById("btn");
+      let video = document.getElementById("video");
+      let timerid = setInterval(() => {
+        timer.innerHTML = `skip add ${i--}`;
+        if (i < 0) {
+          skipAd();
+        }
+      }, 1000);
+      function skipAd() {
+        clearInterval(timerid);
+        btn.style.display = "none";
+        video.src = "././classes/video/mp4.mp4";
+      }
+      btn.addEventListener("click", skipAd);
+    </script>
+  </body>
+</html>
